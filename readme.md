@@ -1,4 +1,4 @@
-# Criando projeto node
+# Back-end - Criando projeto node
 
 ## Iniciando o Yarn e instalando Express
 ```
@@ -57,6 +57,63 @@ function logRequests(request, response, next) {
 }
 app.use(logRequests);
 ```
+# Front-end
 
+## Iniciando yarn e instalando react 
 
+```
+yarn init -y
+yarn add react react-dom // instalando react para web
+```
 
+## Babel
+Converte (transpila) código do React para um código que o browser entenda
+(Loaders: babel-loader, css-loader, image-loader)
+
+## Webpack 
+Para cada tipo de arquivo (.js, .css, .png) converte o código de uma maneira diferente
+
+### Instalando Babel e Webpack
+
+```
+yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli webpack webpack-cli
+yarn add babel-loader
+yarn webpack -mode development
+yarn webpack-dev-server -D
+yarn webpack-dev-server --mode development
+```
+
+# React
+
+* Componentes
+* Propriedade: hierarquia, passar de um componente pai para um componente filho
+* Estado e Imutabilidade
+  * O estado não pode ser modificado
+  * Deve sempre ser criado uma nova informação
+  * quem faz esse processo é o useState 
+* Fragmentação: <></>
+
+## UseState
+*  retorna um array com 2 posições
+  1. Variável com o seu valor inicial
+  2. Função para atualizarmos esse valor  
+
+## UseEffect
+* recebe 2 parametros 
+  1. Função que será disparada, 
+  2. Quando a função será executada
+
+## Carregar arquivos  .css e image no js
+
+```
+yarn add style-loader css-loader // carrega o css 
+ yarn add file-loader // carregar imagens
+```
+
+# Conectando Back-end com Front-end
+
+```
+yarn add axios  
+yarn add cors 
+yarn add @babel/plugin-transform-runtime -D // suporte a funções async 
+```
