@@ -117,3 +117,13 @@ yarn add axios
 yarn add cors 
 yarn add @babel/plugin-transform-runtime -D // suporte a funções async 
 ```
+
+# React Native
+
+API:
+* iOS com emulador: localhost
+* iOS com físico: ip da máquina
+* Android com emulador: localhost (add reverse)
+  * adb reverse tcp:3333 tcp:3333
+* Android com emulador 10.0.2.2 (android studio)
+* Android com emulador 10.0.2.3 (Genymotion)
